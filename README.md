@@ -1,4 +1,22 @@
-# mathlib4
+# mathlib4 (Forked Version)
+
+> **Note:** This repository is a fork of the original [mathlib4](https://github.com/leanprover-community/mathlib4).
+>
+> **Changes made in this fork**:
+>
+> * Integrated a modified version of Aesop
+> * Integrated a modified version of Lean Copilot
+>
+> **Usage:**
+>
+> ```bash
+> lake build RulesetInit && lake build LeanCopilot && lake build repl && lake build
+> ```
+>
+> See `.lake/packages/LeanCopilot/README.md` for instructions on how to enable Lean Copilot and BFS-Prover.
+> To test whether mathlib, aesop, BFS-Prover and Lean Copilot are functioning correctly, see `Test.lean`.
+>
+> Original README follows below.
 
 ![GitHub CI](https://github.com/leanprover-community/mathlib4/workflows/continuous%20integration/badge.svg?branch=master)
 [![Bors enabled](https://bors.tech/images/badge_small.svg)](https://mathlib-bors-ca18eefec4cb.herokuapp.com/repositories/16)

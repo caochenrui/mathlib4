@@ -9,11 +9,13 @@ open Lake DSL
 
 require "leanprover-community" / "batteries" @ git "main"
 require "leanprover-community" / "Qq" @ git "master"
-require "leanprover-community" / "aesop" @ git "master"
 require "leanprover-community" / "proofwidgets" @ git "v0.0.52-pre" -- ProofWidgets should always be pinned to a specific version
 require "leanprover-community" / "importGraph" @ git "main"
 require "leanprover-community" / "LeanSearchClient" @ git "main"
 require "leanprover-community" / "plausible" @ git "main"
+require REPL from git "https://github.com/leanprover-community/repl.git" @ "master"
+require LeanCopilot from git "https://github.com/caochenrui/LeanCopilot.git" @ "dsp+"
+require aesop from git "https://github.com/caochenrui/aesop.git" @ "dsp+"
 
 /-!
 ## Options for building mathlib
@@ -56,6 +58,10 @@ package mathlib where
   -- Warning: Do not put any options here that actually change the olean files,
   -- or inconsistent behavior may result
   -- weakLeanArgs := #[]
+  moreLinkArgs := #[
+    "-L./.lake/packages/LeanCopilot/.lake/build/lib",
+    "-lctranslate2"
+  ]
 
 /-!
 ## Mathlib libraries
@@ -86,6 +92,8 @@ lean_lib Counterexamples where
 /-- Additional documentation in the form of modules that only contain module docstrings. -/
 lean_lib docs where
   roots := #[`docs]
+
+lean_lib RulesetInit
 
 /-!
 ## Executables provided by Mathlib
