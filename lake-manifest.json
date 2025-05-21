@@ -15,7 +15,7 @@
    "type": "git",
    "subDir": null,
    "scope": "",
-   "rev": "5bc6810a291a16f19de578f0ab1fdc224e8464c1",
+   "rev": "1765de4a1fa7f6a5450740ec0d93c4ab09ed82a6",
    "name": "LeanCopilot",
    "manifestFile": "lake-manifest.json",
    "inputRev": "dsp+",
