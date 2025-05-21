@@ -2,12 +2,18 @@
 
 > **Note:** This repository is a fork of the original [mathlib4](https://github.com/leanprover-community/mathlib4).
 >
+> ---
+>
 > **Changes made in this fork**:
 >
 > * Integrated a modified version of Aesop
 > * Integrated a modified version of Lean Copilot
 >
+> ---
+>
 > **Usage:**
+>
+> **If you're using the DSP+ framework, you can skip the following steps and follow its instructions instead.**
 >
 > ```bash
 > lake build RulesetInit && lake build LeanCopilot && lake build repl && lake build
@@ -49,7 +55,7 @@ For more pointers, see [Learning Lean](https://leanprover-community.github.io/le
 
 ## Documentation
 
-Besides the installation guides above and [Lean's general
+Besides the installation guides above and [Lean&#39;s general
 documentation](https://docs.lean-lang.org/lean4/doc/), the documentation
 of mathlib consists of:
 
@@ -91,9 +97,9 @@ You may want to subscribe to the `mathlib4` stream
 
 Mathlib has the following guidelines and conventions that must be followed
 
- - The [style guide](https://leanprover-community.github.io/contribute/style.html)
- - A guide on the [naming convention](https://leanprover-community.github.io/contribute/naming.html)
- - The [documentation style](https://leanprover-community.github.io/contribute/doc.html)
+- The [style guide](https://leanprover-community.github.io/contribute/style.html)
+- A guide on the [naming convention](https://leanprover-community.github.io/contribute/naming.html)
+- The [documentation style](https://leanprover-community.github.io/contribute/doc.html)
 
 ### Downloading cached build files
 
@@ -113,6 +119,7 @@ is responsible for generating and publishing the
 [mathlib4 docs](https://leanprover-community.github.io/mathlib4_docs/index.html).
 
 That repo can be used to build the docs locally:
+
 ```shell
 git clone https://github.com/leanprover-community/mathlib4_docs.git
 cd mathlib4_docs
@@ -120,6 +127,7 @@ cp ../mathlib4/lean-toolchain .
 lake exe cache get
 lake build Mathlib:docs
 ```
+
 The last step may take a while (>20 minutes).
 The HTML files can then be found in `.lake/build/doc`.
 
