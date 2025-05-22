@@ -94,6 +94,7 @@ lean_lib docs where
   roots := #[`docs]
 
 lean_lib RulesetInit
+lean_lib Proof
 
 /-!
 ## Executables provided by Mathlib
